@@ -38,9 +38,11 @@ server {
         
 
         location / {
-                
+                return 200 '200 OK';
+                add_header Content-Type text/plain;
+
                 #proxy_pass http://afdtestorigin.azurewebsites.net;
-                proxy_pass https://varunchstaticwebsite.z22.web.core.windows.net;
-                include proxy_params;
+                #proxy_pass https://varunchstaticwebsite.z22.web.core.windows.net;
+                #include proxy_params;
         }
 }
