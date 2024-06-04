@@ -39,7 +39,8 @@ server {
 
         location / {
                 
-                proxy_pass http://afdtestorigin.azurewebsites.net;
+                #proxy_pass http://afdtestorigin.azurewebsites.net;
+                proxy_pass https://varunchstaticwebsite.z22.web.core.windows.net;
                 include proxy_params;
         }
 }
