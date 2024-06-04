@@ -35,11 +35,15 @@ server {
                 wallarm_mode off;
                 return 500 "API FW fallback";
         }
-        
 
-        location / {
+        location /200 {
                 return 200 '200 OK';
                 add_header Content-Type text/plain;
+        }
+
+        location / {
+
+                return 301 $scheme://afd-integration-demo.centralus.azurecontainer.io/200;
 
                 #proxy_pass http://afdtestorigin.azurewebsites.net;
                 #proxy_pass https://varunchstaticwebsite.z22.web.core.windows.net;
