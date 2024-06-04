@@ -43,10 +43,10 @@ server {
 
         location / {
 
-                return 301 $scheme://afd-integration-demo.centralus.azurecontainer.io/200;
+                #return 301 $scheme://afd-integration-demo.centralus.azurecontainer.io/200;
 
                 #proxy_pass http://afdtestorigin.azurewebsites.net;
-                #proxy_pass https://varunchstaticwebsite.z22.web.core.windows.net;
-                #include proxy_params;
+                proxy_pass https://varunchstaticwebsite.z22.web.core.windows.net;
+                include proxy_params;
         }
 }
