@@ -46,7 +46,7 @@ server {
                 #return 301 $scheme://afd-integration-demo.centralus.azurecontainer.io/200;
 
                 #proxy_pass http://afdtestorigin.azurewebsites.net;
-                proxy_pass https://varunchstaticwebsite.z22.web.core.windows.net;
+                proxy_pass https://stuffserverforintegrationtests.msedge-test.net;
                 include proxy_params;
         }
 }
